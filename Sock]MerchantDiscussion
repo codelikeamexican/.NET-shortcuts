@@ -1,0 +1,13 @@
+//Solution proposal
+//The first line contains an integer , the number of socks represented in .
+//The second line contains  space-separated integers describing the colors  of the socks in the pile.
+
+    int pairs=0; // we need a counter 
+    //then we use LinQ to group by the same elements given
+    foreach(var element in ar.GroupBy(x => x)){
+        if(element.Count()>=2)
+          pairs += element.Count()/2;
+    }
+    return pairs;
+    }
+    
